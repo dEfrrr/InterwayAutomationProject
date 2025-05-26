@@ -1,0 +1,87 @@
+ 
+<div class="container mt-5 mat-elevation-z8">
+  <div>
+    <button class="btn btn-primary mb-3 rounded" (click)="addProduct()">Add product</button>
+  </div>
+
+  <div>
+    <form [formGroup]="formValues">
+      <div class="row">
+        <mat-form-field class="col">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" formControlName="name"/>
+        </mat-form-field>
+
+        <mat-form-field class="col">
+          <mat-label>Price from</mat-label>
+          <input matInput type="text" formControlName="priceFrom"/>
+        </mat-form-field>
+
+        <mat-form-field class="col">
+          <mat-label>Price to</mat-label>
+          <input matInput type="text" formControlName="priceTo"/>
+        </mat-form-field>
+
+        <mat-form-field class="col">
+          <mat-label>Select category</mat-label>
+          <mat-select formControlName="categoryId">
+            <mat-option *ngFor="let category of categories;" [value]="category.id">
+              {{ category.categoryName }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <button class="btn btn-primary mb-3 rounded col" type="button" (click)="getProducts()">Filter products</button>
+      </div>
+    </form>
+  </div>
+
+  <table mat-table [dataSource]="dataSource" class="mat-table">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> ID </th>
+      <td mat-cell *matCellDef="let product"> {{ product.id }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let product"> {{ product.name }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Price </th>
+      <td mat-cell *matCellDef="let product"> {{ product.price }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="category">
+      <th mat-header-cell *matHeaderCellDef> Category </th>
+      <td mat-cell *matCellDef="let product"> {{ product.category?.categoryName || 'N/A' }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="details">
+      <th mat-header-cell *matHeaderCellDef> Details </th>
+      <td mat-cell *matCellDef="let product">
+        <button mat-button color="primary" (click)="productDetails(product.id)">Details</button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef> Edit </th>
+      <td mat-cell *matCellDef="let product">
+        <button mat-button color="accent" (click)="editProduct(product.id)">Edit</button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <th mat-header-cell *matHeaderCellDef> Delete </th>
+      <td mat-cell *matCellDef="let product">
+        <button mat-button color="warn" (click)="deleteProduct(product.id)">Delete</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20, 50, 100]" [pageSize]="5" showFirstLastButtons></mat-paginator>
+</div>

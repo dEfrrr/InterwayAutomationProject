@@ -1,0 +1,51 @@
+ 
+ 
+<form [formGroup]="productForm" *ngIf="productForm?.get('name')" class="container mt-5 bg-light border border-dark rounded pt-5">
+   <div>
+    
+  </div>
+  <div class="row">
+    <mat-form-field class="col-6">
+      <mat-label>Enter name</mat-label>
+      <input matInput type="text" formControlName="name"/>
+      <mat-error *ngIf="productForm.get('name')?.hasError('required')">This field is required!</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="col-6">
+      <mat-label>Enter description</mat-label>
+      <input matInput type="text" formControlName="description"/>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-6">
+      <mat-label>Enter price</mat-label>
+      <input matInput type="number" formControlName="price"/>
+      <mat-error *ngIf="productForm.get('price')?.hasError('required')">This field is required!</mat-error>
+      <mat-error *ngIf="productForm.get('price')?.hasError('min')">Value must be positive number</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="col-6">
+      <mat-label>Enter quantity</mat-label>
+      <input matInput type="number" formControlName="quantityInStock"/>
+      <mat-error *ngIf="productForm.get('quantityInStock')?.hasError('required')">This field is required!</mat-error>
+      <mat-error *ngIf="productForm.get('quantityInStock')?.hasError('min')">Value must be positive number</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field class="col-12">
+      <mat-label>Select category</mat-label>
+      <mat-select formControlName="category">
+        <mat-option *ngFor="let category of categories;" [value]="category.id">
+          {{ category.categoryName }}
+        </mat-option>
+
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <button class="btn btn-primary mb-3 rounded" type="button" (click)="submitForm()">Submit</button>
+  <button class="btn btn-primary mb-3 rounded" (click)="return()">Back</button>
+</form>
+

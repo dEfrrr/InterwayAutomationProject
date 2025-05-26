@@ -1,0 +1,16 @@
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\controller\CategoryController.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\controller\ProductController.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\dto\CategoryDTO.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\dto\CreateProductDTO.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\dto\ProductDTO.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\exception\ProductNotFoundException.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\InventoryManagementBackendApplication.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\model\enums\Category.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\model\Product.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\repository\ProductRepository.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\service\CategoryService.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\service\impl\CategoryServiceImpl.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\service\impl\ProductMapperServiceImpl.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\service\impl\ProductServiceImpl.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\service\ProductMapperService.java
+C:\Users\dimit\Desktop\inventoryApp-master (2)\inventoryApp-master\QA task\inventory-app\InventoryManagementBackend\src\main\java\org\example\inventorymanagementbackend\service\ProductService.java
